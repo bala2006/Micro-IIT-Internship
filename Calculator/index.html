@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Pro Calculator</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark-theme">
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <h1 id="logo">Advanced Pro Calculator</h1>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#calculator-section">Calculator</a></li>
+            <li><a href="#history-section">History</a></li>
+          </ul>
+          <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="main-content">
+        <!-- Instructions Sidebar -->
+        <aside id="instructions-section" class="sidebar">
+          <div class="instructions-container">
+            <h2>How to Use</h2>
+            <ol>
+              <li>Press buttons to build your expression.</li>
+              <li>Hit "=" or press Enter to calculate.</li>
+              <li>"C" clears; "⌫" deletes last input.</li>
+              <li>"M+" stores value; "MR" recalls it.</li>
+              <li>Keyboard input is supported.</li>
+              <li>History of calculations appears below.</li>
+            </ol>
+          </div>
+        </aside>
+
+        <!-- Calculator Section -->
+        <section id="calculator-section">
+          <div class="calculator-container">
+            <div class="display-container">
+              <input id="display" type="text" placeholder="0" disabled />
+            </div>
+            <div class="button-grid">
+              <!-- Row 1 -->
+              <button class="btn operator" onclick="clearDisplay()">C</button>
+              <button class="btn operator" onclick="appendToDisplay('/')">÷</button>
+              <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+              <button class="btn operator" onclick="deleteLast()">⌫</button>
+              <!-- Row 2 -->
+              <button class="btn" onclick="appendToDisplay('7')">7</button>
+              <button class="btn" onclick="appendToDisplay('8')">8</button>
+              <button class="btn" onclick="appendToDisplay('9')">9</button>
+              <button class="btn operator" onclick="appendToDisplay('-')">−</button>
+              <!-- Row 3 -->
+              <button class="btn" onclick="appendToDisplay('4')">4</button>
+              <button class="btn" onclick="appendToDisplay('5')">5</button>
+              <button class="btn" onclick="appendToDisplay('6')">6</button>
+              <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+              <!-- Row 4 -->
+              <button class="btn" onclick="appendToDisplay('1')">1</button>
+              <button class="btn" onclick="appendToDisplay('2')">2</button>
+              <button class="btn" onclick="appendToDisplay('3')">3</button>
+              <button class="btn equals" onclick="calculateResult()">=</button>
+              <!-- Row 5 -->
+              <button class="btn wide" onclick="appendToDisplay('0')">0</button>
+              <button class="btn" onclick="appendToDisplay('.')">.</button>
+              <button class="btn memory" onclick="memoryStore()">M+</button>
+              <button class="btn memory" onclick="memoryRecall()">MR</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- History Section -->
+      <section id="history-section">
+        <div class="history-container">
+          <h2>Calculation History</h2>
+          <ul id="history-list">
+            <!-- History items will appear here -->
+          </ul>
+          <button id="clear-history" onclick="clearHistory()">Clear History</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        © 2025 Micro IIT Internship. All rights reserved. Crafted with excellence.
+      </p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
