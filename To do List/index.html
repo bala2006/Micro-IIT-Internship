@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced To-Do List</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="dark-theme">
+    <!-- Header -->
+    <header>
+      <div class="header-container">
+        <h1>Advanced To-Do List</h1>
+        <button id="theme-toggle" title="Toggle Dark/Light Mode">🌙</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="todo-app">
+        <div class="todo-container">
+          <h2>Your Tasks</h2>
+          <form id="task-form">
+            <input type="text" id="task-input" placeholder="Add new task..." required />
+            <button type="submit">Add Task</button>
+          </form>
+          <ul id="task-list">
+            <!-- Tasks will appear here -->
+          </ul>
+          <button id="clear-tasks">Clear All Tasks</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Micro IIT Internship. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
